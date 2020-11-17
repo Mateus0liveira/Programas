@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <title>PAR/IMPAR</title>
+    <STyle>
+        body{
+            font: normal 20px arial;
+            text-align: center;
+            border: 5px solid black;
+            margin-top: 18pc;
+            background-color: black;
+            
+
+        }
+        input{
+            font: normal 20px arial;
+            background-color: black;
+            color: #b3b3b3;
+        } 
+        div{
+            font: normal 40px arial;
+            background-color: black;
+            color: #b3b3b3;
+        }
+        h1{
+            font: normal 30px arial;
+            color: blue;
+        }
+
+    </STyle>
+
+</head>
+<body>
+    <h1>Verificador para <strong>PAR</strong> ou <strong>IMPAR</strong>!</h1></br>
+    <input type="number" id="txtn" >
+    <input type="button" value="OK!" onclick="verificar()">
+    <div id="res" > Esse numero é par ou impar ?</div>
+
+
+
+    <script>
+        
+        function verificar(){
+            var tn1 = document.querySelector('input#txtn')
+            var n1 = Number(tn1.value)
+            var res = document.querySelector('div#res')
+            var s = n1 % 2
+
+             if ( s == 0){
+                res.innerHTML = 'Esse numero é <strong>PAR</strong>'
+                
+
+            } else{
+                res.innerHTML = 'Esse numero é <strong>IMPAR</strong>'
+            }
+            
+
+
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>
